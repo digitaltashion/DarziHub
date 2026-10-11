@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>DarziHub — درزی ہب</title>
+<meta name="description" content="Offline-first tailor shop manager: customers, measurements, orders, khata and receipts — English & Urdu" />
+<meta name="theme-color" content="#3E6BFF" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icons/favicon-32.png" />
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="DarziHub" />
+<meta name="mobile-web-app-capable" content="yes" />
+
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+<div id="app">
+  <div style="min-height:100vh; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:14px;">
+    <div class="spin" style="width:34px; height:34px; border:3px solid rgba(62,107,255,0.2); border-top-color:#3E6BFF; border-radius:50%;"></div>
+    <div class="text-faint" style="font-size:13px;">DarziHub…</div>
+  </div>
+</div>
+
+<!-- Vendor libraries (CDN — cached offline by the service worker after first load) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/4.0.8/dexie.min.js"></script>
+<script src="https://unpkg.com/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+
+<!-- App: utils -->
+<script src="js/utils/i18n.js"></script>
+<script src="js/utils/format.js"></script>
+<script src="js/utils/helpers.js"></script>
+<script src="js/utils/garments.js"></script>
+<script src="js/utils/parts.js"></script>
+
+<!-- App: data layer & components -->
+<script src="js/db/db.js"></script>
+<script src="js/components/toast.js"></script>
+<script src="js/components/lock.js"></script>
+
+<!-- Router (screen modules are lazy-loaded on first visit) -->
+<script src="js/modules/router.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').catch(() => {}); });
+  }
+</script>
+</body>
+</html>

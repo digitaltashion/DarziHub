@@ -1,0 +1,21 @@
+/* =========================================================
+   ContractHub — Animations
+   Restrained: one entrance for screen content, hover/press
+   states elsewhere handled inline in main.css.
+   ========================================================= */
+
+@keyframes screenIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.screen { animation: screenIn .28s cubic-bezier(.2,.8,.3,1); }
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+.glass.card { animation: none; }
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}

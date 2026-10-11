@@ -1,0 +1,24 @@
+{
+  "name": "DarziHub — Tailor Shop Manager",
+  "short_name": "DarziHub",
+  "description": "Offline tailor shop manager: customers, measurements, orders, khata and receipts — English & Urdu",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#EEF1F8",
+  "theme_color": "#3E6BFF",
+  "lang": "ur",
+  "dir": "auto",
+  "categories": ["business", "productivity", "finance"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "New Order", "url": "./index.html#/orders/new" },
+    { "name": "New Customer", "url": "./index.html#/customers/new" },
+    { "name": "Khata", "url": "./index.html#/accounts?tab=khata" }
+  ]
+}
